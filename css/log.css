@@ -1,0 +1,97 @@
+/* ---------------- DEFAULTS  ---------------- */
+
+* {
+    font-family: 'Open Sans', sans-serif, Arial;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+    animation: fadein 1s;
+    background-color: #211b29;
+    
+    color: wheat;
+}
+
+body {
+    margin: 0;
+}
+
+::selection {
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+/* ---------------- CUERPO ---------------- */
+
+.contenido2, h3 {
+    margin-left: 20px;
+    border-left: 2px solid;
+    padding-left: 20px;
+}
+
+/* ---------------- TIPO DE CONTENIDO ---------------- */
+
+.agregado {
+    color: greenyellow;
+}
+
+.cambios {
+    color: darkorange;
+}
+
+.eliminado {
+    color: brown;
+}
+
+/* ---------------- LINK A INICIO ---------------- */
+
+.inicio {
+    position: fixed;
+    bottom: 2%;
+    z-index: 1;
+    border: none;
+    outline: none;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding: 18px;
+    background: rgba(0, 0, 0, 0.6);
+    
+    border-radius: 30px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    
+    transition: border-radius 2s;
+    
+    animation: fadebottom 3s;
+}
+
+.inicio:hover {
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.inicio > a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+/* ---------------- ANIMACIONES ---------------- */
+
+@keyframes fadein {
+    0% {opacity: 0;transform: translateY(-20px);}
+    100% {opacity: 1;transform: translateY(0px);}
+}
+
+@keyframes fadebottom {
+    0% {opacity: 0;transform: translateY(+300px);}
+    100% {opacity: 1;}
+}

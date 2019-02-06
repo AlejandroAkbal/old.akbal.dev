@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- ----------------- Defaults ----------------- -->
+
+    <title>Akbal's webpage</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- ----------------- Google's ----------------- -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <meta name="author" content="Alejandro Akbal">
+
+    <meta name="description" content="Pagina web de Alejandro Akbal" />
+
+    <meta name="keywords" content="alejandro,akbal,webpage">
+
+    <meta name="google-site-verification" content="CEeAtjuNLj7-jKQX-qayi7l9UJKHtcttJNP9G2SHFJc" />
+
+    <!-- ----------------- CSS y JS----------------- -->
+
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    
+    <!-- ----------------- JS colorear ----------------- -->
+    <style id="elementoColorear"></style>
+    
+</head>
+
+<body>
+    
+    <!-- --- Color Actual --- -->
+    <input id="colorGenerado" type="hidden">
+
+    <div id="RGBContent" class="RGB">
+        
+        <div>
+            
+            <button onclick="toggleRGBMenu()">True RGB</button>
+            <button onclick="cambiarStyle()">Cambiar</button>
+            <button onclick="quitarStyle()">Quitar</button>
+            <button onclick="guardarStyle()">Guardar</button>
+        
+        </div>
+        
+    </div>
+
+    <!-- ----------------- Caratula ----------------- -->
+
+    <div id="inicio" class="header">
+
+        <h1 onclick="ToggleRGB()" title="Pagina de Alejandro Akbal"> Akbal's</h1>
+        <noscript> Si no utilizas JavaScript no pasa nada! </noscript>
+
+    </div>
+
+    <!-- ----------------- Barra con links ----------------- -->
+
+    <div class="navegacion">
+
+        <a href="https://www.youtube.com/channel/UC2E_TLZu2f3AYYY7auAgTng" target="_blank" title="Mis videos de lyrics">YouTube</a>
+
+        <a href="https://www.instagram.com/voidlesseven7/" target="_blank" title="Mira mis fotos">Instagram</a>
+
+        <a href="https://open.spotify.com/user/11181369666/playlist/3LniDHhZiifcwzjKlBfiYN?si=5jL6HXqjS3ia4OyhKqsSJw" target="_blank" title="La musica que escucho actualmente">Spotify Playlist</a>
+
+        <a href="#info" title="Conóceme">Sobre mi</a>
+
+        <a href="/links" title="Mira todo el trabajo que he hecho en esta web!">Links</a>
+
+    </div>
+
+    <!-- ----------------- Cuerpo ----------------- -->
+
+    <div class="cuerpo">
+
+        <div class="contenido1">
+
+            <h1> Posts </h1>
+            
+            <div id="post8">
+
+                <h4>Una lista, de cambios</h4>
+
+                <p> No me terminaba de gustar poner cada cambio en la pagina principal, asi que ahora voy listando todo lo que hago <a href="/log">aqui</a>, de forma que documento cada cosa que voy cambiando, estilo github.</p>
+
+                <h6>23/01/2019</h6>
+
+            </div>
+            
+            <div id="post7">
+
+                <h4>Biblioteca</h4>
+
+                <p> Junto al cambio reciente de colores, he decidido expandir los colores de forma que afectan "Globalmente" a la pagina. Ah! Y he añadido una <a href="/temas">biblioteca de temas</a>, en esta puedes compartir tus temas favoritos con el resto del mundo.</p>
+
+                <h6>22/01/2019</h6>
+
+            </div>
+
+            <div id="post6">
+
+                <h4>Colores!</h4>
+
+                <p> Tras una ardua y pausada batalla con PHP, ahora existe la opcion de usar temas generados dinamicamente! Se puede activar esta funcionalidad tocando en el nombre de la pagina.</p>
+
+                <h6>19/01/2019</h6>
+
+            </div>
+
+            <div id="post5">
+
+                <h4>Un simple minijuego</h4>
+
+                <p> He estado ocupado en <a href="/clicker">un minijuego</a>, se trata de alcanzar la maxima puntuacion haciendo clicks, ademas puedes enviar tu puntuacion y se guarda junto a las de otros jugadores. Basicamente era una prueba para familiarizarme con el funcionamiento de PHP y MariaDB.</p>
+
+                <h6>17/12/2018</h6>
+
+            </div>
+
+            <div id="post4">
+
+                <h4>Sin motivacion</h4>
+
+                <p> Sorpresa! Sigo vivo. Ultimamente no sé que añadir, simplemente voy haciendo pequeñas mejoras, como <a href="/links">esta pagina</a> que indexa todos los links de mi web y algun que otro arreglo.</p>
+
+                <h6>11/12/2018</h6>
+
+            </div>
+
+            <div id="post3">
+
+                <h4> Goustissimo</h4>
+
+                <p> Ayer pregunté sobre que podia agregar a la pagina web para que fuese un poco mejor, después de varias tonterias apareció la idea de un "podio" de fotos de augusto, <a href="/gousto">aquí está</a>.</p>
+
+                <h6>27/11/2018</h6>
+
+            </div>
+
+            <div id="post2">
+
+                <h4> Error 404, not found</h4>
+
+                <p> Esta mañana me he esmerado en hacer <a href="bushdid9/11">una pagina web</a> que saltará cuando intentemos acceder a algo inexistente, además de algunas mejoras como animaciones.</p>
+
+                <h6>25/11/2018</h6>
+
+            </div>
+
+            <div id="post2">
+
+                <h4> SSL, Google y alegrias </h4>
+
+                <p> Tras una abrupta batalla he conseguido traer HTTP<b><em>S</em></b>, además de indexar esta web en google, además de bloqueando ciertos males con <a href="/robots.txt">robots.txt</a>.</p>
+
+                <h6>24/11/2018</h6>
+
+            </div>
+
+            <div id="post1">
+
+                <h4> Regalo </h4>
+
+                <p> He añadido una <a href="/suciojudio" title="Eden la chupa">pagina customizada</a> a los gustos de Eden, un compañero al que sé que le encanta esta web. </p>
+
+                <h6>23/11/2018</h6>
+
+            </div>
+
+            <div id="post0">
+
+                <h4> El inicio de esta pagina </h4>
+
+                <p> Me gustaria condecorar que el <b>18/11/2018</b> me dió un venazo tremendo por ponerme a hacer mi propia pagina web, con el unico objetivo de que los links de Spotify no los joda Instagram y sus ad-shorteners / trackers. </p>
+
+                <h6>21/11/2018</h6>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div id="info" class="contenido2">
+
+            <h1 title="Toca el texto de los articulos!"> Información </h1>
+
+            <div id="me0">
+
+                <h3> Sobre mi </h3>
+
+                <p> Una buena descripcion no se aleja de: <br> <em>"Joven que superó la era emo, con inclinaciones a la musica punk, a veces apasionado con la informatica"</em>.</p>
+
+            </div>
+
+            <br />
+
+            <div id="me1">
+
+                <h3> Preguntas frecuentes</h3>
+
+
+
+                <p><b>P:</b> Por qué <em>Akbal</em> como nombre para la web?</p>
+
+                <p><b>R:</b> Simplemente me vino a la mente, estuve pensando en algun nombre no muy emo/edgy y surgió mi segundo nombre, si, <em>mi segundo nombre legal</em>.</p>
+
+
+
+                <p><b>P:</b> Estudias, trabajas, que haces?</p>
+
+                <p><b>R:</b> Actualmente me encuentro en un grado medio de informatica, en mi tiempo libre veo series en Netflix, uso Reddit e intento aprender a programar. </p>
+                <p> Mi pasion ultimamente es descubrir cosas nuevas y llegar a entenderlas.</p>
+
+
+                <p><b>P:</b> Que planes tienes para esta pagina?</p>
+
+                <p><b>R:</b> Lo que se me vaya ocurriendo.</p>
+
+            </div>
+
+            <br />
+
+            <div id="me2">
+
+                <h3> Ideas! </h3>
+
+                <p> Si tienes alguna sugerencia, idea o peticion para la web, no dudes en enviarmelo!</p>
+
+            </div>
+
+            <br />
+
+            <div id="me3">
+
+                <h3> Contacto </h3>
+
+                <p> No hay mucho misterio, si tienes alguna duda enviame <a href="mailto:saalejandroromero@gmail.com" title="O enviame un mensaje en instagram"> un email aquí</a>.</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ----------------- FOOTER ----------------- -->
+
+    <div class="footer">
+
+        <a href="#inicio">Volver al inicio</a>
+
+    </div>
+
+    <!-- ----------------- FOOTER ----------------- -->
+    
+    <div id="overlay" onclick="toggleRGBMenu()"></div>
+    
+    <div id="MenuRGB" class="MenuRGB">
+        
+        <h2>RGB Menu</h2>
+        
+        <div>
+
+            <span>Random RGB</span> <input type="radio" name="modoRGB" onclick="randomRGB()"> 
+
+            <span>Generic RGB</span> <input type="radio" name="modoRGB">
+
+            <span>Desactivar</span> <input type="radio" name="modoRGB" onclick="stopRGB()">
+            
+        </div>
+        
+        <div>
+        
+            <span>Velocidad</span> <input type="range" min="0" max="10000" id="velocidad" value="2000"><span id="variableVelocidad">2000</span> <br>
+
+            <span>Transicion</span> <input type="range" min="1" max="100" id="transicion" value="20"><span id="variableTransicion">2.0</span>
+            
+        </div>
+        
+    </div>
+    
+</body>
+    
+    <!-- --- JS aqui porque no le da la gana funcionar antes --- -->
+    
+    <script src="js/javascript.js"> </script>
+    
+    <script src="js/aplicarColores.js"> </script>
+
+</html>
+
+
+<!-- Pagina creada a mano por Alejandro con el objetivo de obtener mas experiencia en "programacion" -->

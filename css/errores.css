@@ -1,0 +1,70 @@
+/* ---------------- DEFAULTS ---------------- */
+
+* {
+    font-family: 'Open Sans', sans-serif, Arial;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #83192d;
+
+    color: #211b29;
+    text-align: center;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    animation: fadein 1s;
+    background-color: #211b29;
+}
+
+/* ---------------- ERROR ---------------- */
+
+.title {
+    padding-top: 150px;
+    font-size: 30px;
+    text-shadow: 0px 0px 0px;
+
+    animation: shadow 3s infinite;
+}
+
+.subtitle {
+    font-size: 18px;
+    text-decoration: underline;
+
+}
+
+/* ---------------- VUELTA A CASA ---------------- */
+
+.home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: solid 1px black;
+    box-shadow: 0 15px 30px 0 rgba(0,0,0,0.11),
+            0 5px 15px 0 rgba(0,0,0,0.08);
+}
+
+.home > a {
+    text-decoration: none;
+    color: #301121;
+    font-size: 20px;
+}
+
+/* ---------------- "SCRIPTS" ---------------- */
+
+@media all and (max-width: 700px) {
+
+    div {
+        flex-direction: column;
+    }
+}
+
+@keyframes shadow {
+50% {text-shadow: 0px 0px 20px;}
+}
+
+@keyframes fadein {
+    0% {opacity: 0;-webkit-transform: translateY(-20px);transform: translateY(-20px);}
+    100% {opacity: 1;-webkit-transform: translateY(0);transform: translateY(0);}
+}

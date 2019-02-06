@@ -1,0 +1,119 @@
+<?php
+    
+    /* ----------------- Activar el modo RGB ----------------- */
+
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                $RGB = test_input($_POST["RGB"]);
+                $aplicarColor = test_input($_POST["aplicarColor"]);
+                $hasRefreshed = test_input($_POST["hasRefreshed"]);
+
+                $_SESSION["modoRGB"] = $RGB;
+                
+    /* --- Si no han aplicado nada no hacer nada --- */
+
+                if (!empty($aplicarColor)) { 
+                $_SESSION["color"] = $aplicarColor;
+                }
+                
+                $_SESSION["Refreshed"] = $hasRefreshed;
+            }
+
+    /* ----------------- Sanizar el input ----------------- */
+        
+            function test_input($data) {
+              $data = trim($data);
+              $data = stripslashes($data);
+              $data = htmlspecialchars($data);
+              return $data;
+            }
+
+     /* ----------------- Funcion para hacer Random Hex Color ----------------- */
+            
+            function randomHex() {
+
+               $chars = 'ABCDEF0123456789';
+               $color = '#';
+                
+               for ( $i = 0; $i < 6; $i++ ) {
+                  $color .= $chars[rand(0, strlen($chars) - 1)];
+               }
+               return $color;
+            }
+            
+    /* ----------------- Segun el modo aplicar color ----------------- */
+
+            if ($_SESSION["modoRGB"] == "RGB") {
+        
+                $_SESSION["color"] = randomHex();
+                AplicarColor();
+            
+            } elseif ($_SESSION["modoRGB"] == "Guardar") {
+
+                AplicarColor();
+
+            }
+
+    /* ----------------- Funcion principal que aplica el color ----------------- */
+            
+
+            function AplicarColor() {
+
+                echo '<style>';
+                
+                echo 'html {';
+                echo 'background-color: #211b29;';
+                echo '}';
+/*
+                echo 'a {';
+                echo 'color:';
+                echo $_SESSION["color"];
+                echo ';';
+                echo 'filter:';
+                echo 'brightness(0.40)';
+                echo ';';
+                echo '}';
+*/
+    /* ----------------- Contenido 1 ----------------- */
+
+                echo '.contenido1 {';
+                echo 'background:';
+                echo $_SESSION["color"];
+                echo ';';
+                echo 'filter:';
+                echo 'brightness(1.30)';
+                echo ';';
+                echo '}';
+
+    /* ----------------- Contenido 2 ----------------- */
+
+                echo '.contenido2 {';
+                echo 'background:';
+                echo $_SESSION["color"];
+                echo ';';
+                echo 'filter:';
+                echo 'brightness(0.90)';
+                echo ';';
+                echo '}';
+
+    /* ----------------- Header y footer -----------------      .            echo ''; */
+
+                echo '.header, .footer {';
+                echo 'background:';
+                echo $_SESSION["color"];
+                echo ';';
+                echo '}';
+
+                echo '</style>';
+
+            }
+
+            if ($_SESSION["Refreshed"] == "0") {
+
+                $_SESSION["Refreshed"] = "1";
+                header("Refresh:0");
+
+            }
+
+
+        ?>

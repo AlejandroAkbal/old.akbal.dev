@@ -1,0 +1,95 @@
+* {
+    font-family: 'Open Sans', sans-serif, Arial;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    animation: fadein 1s;
+    background-color: #1d1824;
+}
+
+body {
+    background-color: #211b29;
+}
+
+/* ---------------- CUERPO ---------------- */
+
+div > img {
+    padding: 10px;
+    
+    height: 300px;
+    width: 250px;
+}
+
+div > a > img {
+    padding: 10px;
+    
+    height: 300px;
+    width: 250px;
+}
+
+.container1 {
+    width: 100%;
+    text-align: center; 
+}
+
+.container2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content:center;
+}
+
+.tercera {
+    height: 300px;
+    width: 250px;
+    color: white;
+}
+
+.tercera:hover {
+    background-image: url(../images/gousto4.jpg);
+    display: inline-flex;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.home {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.home > a {
+    text-decoration: none;
+    color: #6d8a90;
+    font-size: 20px;
+}
+
+/* ---------------- DECORATIVOS ---------------- */
+
+.raya_top {
+    border-bottom: solid 1px white;
+}
+
+.raya_bottom {
+    border-top: solid 1px white;
+}
+
+
+
+/* ---------------- CAMBIAR DE TAMAÑO SI ES MOVIL ---------------- */
+
+@media all and (max-width: 700px) {
+
+    .container2 {
+        display: block;
+        flex-direction: column;
+    }
+}
+
+/* ---------------- ANIMACIONES ---------------- */
+
+@keyframes fadein {
+    0% {opacity: 0;transform: translateY(-20px);}
+    100% {opacity: 1;transform: translateY(0);}
+}
