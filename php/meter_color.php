@@ -96,7 +96,7 @@ echo "<br> <br>";
 
         function wait() {
             setTimeout(function() {
-                window.location = "https://www.akbal.tk/temas"
+                window.location = "https://old.akbal.tk/temas"
             }, 5000);
         }
         wait();
