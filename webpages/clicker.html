@@ -1,80 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <!-- ----------------- Defaults ----------------- -->
 
-    <head>
+    <title>Akbal's Clicker</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- ----------------- Defaults ----------------- -->
+    <!-- ----------------- Google's ----------------- -->
 
-        <title>Akbal's Clicker</title>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
 
-        <!-- ----------------- Google's ----------------- -->
+    <meta name="author" content="Alejandro Akbal" />
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta name="description" content="Contador de clicks por segundo" />
 
-        <meta name="author" content="Alejandro Akbal">
+    <meta
+      name="keywords"
+      content="clicker,cps,clicks per second,clicks por segundo, clicks, cleaderboard"
+    />
 
-        <meta name="description" content="Contador de clicks por segundo" />
+    <!-- ----------------- CSS y JS ----------------- -->
 
-        <meta name="keywords" content="clicker,cps,clicks per second,clicks por segundo, clicks, cleaderboard">
+    <link href="/css/clicker.css" type="text/css" rel="stylesheet" />
 
-        <!-- ----------------- CSS y JS ----------------- -->
+    <script src="/js/clicker.js"></script>
+  </head>
 
-        <link href="../css/clicker.css" type="text/css" rel="stylesheet" />
-        
-        <script src="../js/clicker.js"> </script>
+  <body>
+    <div class="nav">
+      <h1>Akbal's</h1>
+      <a href="/">Inicio</a>
+      <a href="#" onclick="onClickDatabase()">Leaderboards</a>
+      <noscript> Necesitarás JavaScript! </noscript>
+    </div>
 
-    </head>
+    <div id="el_boton2" class="boton">
+      <button id="el_boton" onclick="onClick()"></button>
 
-    <body>
-        
-        <div class="nav">
-        
-            <h1>Akbal's</h1>
-            <a href="../">Inicio</a>
-            <a href="#" onclick="onClickDatabase()" >Leaderboards</a>
-            <noscript> Necesitarás JavaScript! </noscript>
-        </div>
-        
-        <div id="el_boton2" class="boton">
-            
-            <button id="el_boton" onclick="onClick()"></button>
-            
-            <h2 id="CPS">.</h2>
-            
-            
-            
-        </div>
+      <h2 id="CPS">.</h2>
+    </div>
 
-        <div id="Database" class="nada">
-        
-            <!-- ----------- INICIO EXTRACCION PHP ----------- -->
-            
-            <?php include '/webroot/php/importar_puntuacion.php';?>
-            
-            <!-- ----------- FIN EXTRACCION PHP ----------- -->
-            
-        </div>
-        
-        
-        <span class="opciones">
-            
-            <button onclick="cambiar_forma()">Cambiar Forma</button>
-            
-            <form action="../php/meter_puntuacion.php" method="POST">
-            
-                <input type="text" name="meterusuario" placeholder="Tu nombre" value="">
-                
-                <input id="meterlapuntuacion" type="hidden" name="meterpuntuacion" value="0">
-            
-                <input type="submit" name="submit" value="Enviar">
-                
-            </form>
-            
-        </span>
-    
-    </body>
-    
+    <div id="Database" class="nada">
+      <!-- ----------- INICIO EXTRACCION PHP ----------- -->
+
+      <?php include '/var/www/old.akbal.dev/public/php/importar_puntuacion.php';?>
+
+      <!-- ----------- FIN EXTRACCION PHP ----------- -->
+    </div>
+
+    <span class="opciones">
+      <button onclick="cambiar_forma()">Cambiar Forma</button>
+
+      <form action="/php/meter_puntuacion.php" method="POST">
+        <input
+          type="text"
+          name="meterusuario"
+          placeholder="Tu nombre"
+          value=""
+        />
+
+        <input
+          id="meterlapuntuacion"
+          type="hidden"
+          name="meterpuntuacion"
+          value="0"
+        />
+
+        <input type="submit" name="submit" value="Enviar" />
+      </form>
+    </span>
+  </body>
 </html>

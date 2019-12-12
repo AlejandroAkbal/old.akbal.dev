@@ -5,6 +5,8 @@
     $password = "Contraseña1234";
     $database = "temas-database";
 
+    // CREATE USER 'temas-user'@'localhost' IDENTIFIED BY 'Contraseña1234';
+
     // Create connection
     $link = mysqli_connect($servername, $username, $password, $database);
     // Check connection

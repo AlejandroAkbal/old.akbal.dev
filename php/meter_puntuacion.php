@@ -17,7 +17,7 @@
 
         <!-- ----------------- CSS y JS ----------------- -->
 
-        <link href="../css/clicker.css" type="text/css" rel="stylesheet" />
+        <link href="/css/clicker.css" type="text/css" rel="stylesheet" />
 
     </head>
     
@@ -26,8 +26,8 @@
             <div class="nav">
 
                 <h1>Akbal's</h1>
-                <a href="../">Inicio</a>
-                <a href="../clicker" >Volver al clicker</a>
+                <a href="/">Inicio</a>
+                <a href="/webpages/clicker.html" >Volver al clicker</a>
 
             </div>
 

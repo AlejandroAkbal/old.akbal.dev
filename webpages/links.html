@@ -1,78 +1,69 @@
 <?php session_start(); /* ----------------- Iniciar una sesion ----------------- */ ?>
 
 <html lang="es">
+  <head>
+    <!-- ----------------- Defaults ----------------- -->
 
-    <head>
+    <title>Links</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- ----------------- Defaults ----------------- -->
+    <!-- ----------------- Google's ----------------- -->
 
-        <title>Links</title>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
 
-        <!-- ----------------- Google's ----------------- -->
+    <!-- ----------------- CSS ----------------- -->
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="/css/links.css" type="text/css" rel="stylesheet" />
 
-        <!-- ----------------- CSS ----------------- -->
+    <!-- ----------------- JS ----------------- -->
+    <style id="elementoColorear"></style>
+  </head>
 
-        <link href="../css/links.css" type="text/css" rel="stylesheet" />
-        
-        <!-- ----------------- JS ----------------- -->
-        <style id="elementoColorear"></style>
+  <body>
+    <!-- ----------------- Header ----------------- -->
 
-    </head>
+    <div id="inicio" class="contenido1">
+      <a href="/"><b>Vuelve al inicio</b></a>
+    </div>
 
-    <body>
-        
-        <!-- ----------------- Header ----------------- -->
-        
-        <div id="inicio" class="contenido1">
+    <!-- ----------------- Links ----------------- -->
+    <div class="contenido2">
+      <ul>
+        <li><a href="/webpages/temas.html">Temas para la pagina web</a></li>
 
-            <a href="../"><b>Vuelve al inicio</b></a>
+        <li>
+          <a href="/webpages/clicker.html">Minijuego Clicker</a>
+        </li>
 
-        </div>    
-        
-        <!-- ----------------- Links ----------------- -->
-        <div class="contenido2">
-        
-            <ul>
+        <li><a href="/webpages/gousto.html">Pagina de Augusto</a></li>
 
-                <li><a href="../temas">Temas para la pagina web</a></li>
+        <li><a href="/webpages/suciojudio.html">Pagina de Eden</a></li>
 
-                <li><a href="../clicker">Minijuego Clicker</a></li>
+        <li><a href="/webpages/bushdid9/11">Error 404</a></li>
 
-                <li><a href="../gousto">Pagina de Augusto</a></li>
+        <li><a href="/webpages/stats.html">Pagina de Stats</a></li>
 
-                <li><a href="../suciojudio">Pagina de Eden</a></li>
+        <li><a href="/webpages/log.html">Lista de cambios</a></li>
 
-                <li><a href="../bushdid9/11">Error 404</a></li>
+        <li><a href="/webpages/sitemap.xml">Sitemap.xml</a></li>
 
-                <li><a href="../stats">Pagina de Stats</a></li>
-                
-                <li><a href="../log">Lista de cambios</a></li>
+        <li><a href="/webpages/robots.txt">Robots.txt</a></li>
+      </ul>
+    </div>
 
-                <li><a href="../sitemap.xml">Sitemap.xml</a></li>
-
-                <li><a href="../robots.txt">Robots.txt</a></li>
-
-            </ul>
-            
-        </div>
-    
     <!-- ----------------- FOOTER ----------------- -->
 
     <div class="footer">
-
-        <a href="#inicio"><b>Subir</b></a>
-
+      <a href="#inicio"><b>Subir</b></a>
     </div>
-    
-    </body>
-    
-    <!-- --- JS aqui porque no le da la gana funcionar antes --- -->
-    
-    <script src="../js/simpleAplicarColor.js"> </script>
-    
+  </body>
+
+  <!-- --- JS aqui porque no le da la gana funcionar antes --- -->
+
+  <script src="/js/simpleAplicarColor.js"></script>
 </html>
