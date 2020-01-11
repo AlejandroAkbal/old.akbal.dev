@@ -1,9 +1,9 @@
 <?php
             
-    $servername = "localhost";
-    $username = "clicker-user";
-    $password = "Contraseña1234";
-    $database = "clicker-leaderboard";
+    $servername = "10.135.191.214";
+    $username = "old_akbal_user";
+    $password = "VEAIEMFSh5sJRjskgCyI8M01fgDy2WWZ";
+    $database = "old_akbal_db";
 
     // Create connection
     $link = mysqli_connect($servername, $username, $password, $database);
@@ -13,7 +13,7 @@
     }
 
     // Attempt select query execution
-    $sql = "SELECT * FROM puntuacion ORDER BY puntuacion DESC LIMIT 15";
+    $sql = "SELECT * FROM puntuacion ORDER BY puntuacion DESC LIMIT 15;";
     if($result = mysqli_query($link, $sql)){
 
         if(mysqli_num_rows($result) > 0){

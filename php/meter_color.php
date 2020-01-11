@@ -1,9 +1,9 @@
 <?php
 
-$servername = "localhost";
-$username = "temas-user";
-$password = "Contraseña1234";
-$database = "temas-database";
+$servername = "10.135.191.214";
+$username = "old_akbal_user";
+$password = "VEAIEMFSh5sJRjskgCyI8M01fgDy2WWZ";
+$database = "old_akbal_db";
 
 
 

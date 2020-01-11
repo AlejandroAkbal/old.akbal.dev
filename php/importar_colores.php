@@ -1,9 +1,9 @@
 <?php
             
-    $servername = "localhost";
-    $username = "temas-user";
-    $password = "Contraseña1234";
-    $database = "temas-database";
+    $servername = "10.135.191.214";
+    $username = "old_akbal_user";
+    $password = "VEAIEMFSh5sJRjskgCyI8M01fgDy2WWZ";
+    $database = "old_akbal_db";
 
     // CREATE USER 'temas-user'@'localhost' IDENTIFIED BY 'Contraseña1234';
 
@@ -11,6 +11,7 @@
     $link = mysqli_connect($servername, $username, $password, $database);
     // Check connection
     if($link === false){
+        echo "<h1> ERROR: Could not connect. " . mysqli_connect_error() . "</h1>";
         die("ERROR: Could not connect. " . mysqli_connect_error());
     }
 

@@ -27,7 +27,7 @@
 
                 <h1>Akbal's</h1>
                 <a href="/">Inicio</a>
-                <a href="/webpages/clicker.html" >Volver al clicker</a>
+                <a href="/webpages/clicker.php" >Volver al clicker</a>
 
             </div>
 
@@ -36,13 +36,14 @@
                 <!-- ----------- INICIO PHP ----------- -->
         
                 <?php
+                
 
 
 
-$servername = "localhost";
-$username = "clicker-user";
-$password = "Contraseña1234";
-$database = "clicker-leaderboard";
+$servername = "10.135.191.214";
+$username = "old_akbal_user";
+$password = "VEAIEMFSh5sJRjskgCyI8M01fgDy2WWZ";
+$database = "old_akbal_db";
 
 
 
@@ -50,6 +51,7 @@ $database = "clicker-leaderboard";
 $link = mysqli_connect($servername, $username, $password, $database);
 // Check connection
 if($link === false){
+    echo "<h1> ERROR: Could not connect. " . mysqli_connect_error() . "</h1>";
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 

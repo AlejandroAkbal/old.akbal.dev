@@ -83,7 +83,6 @@
 
       <div class="contenido2" id="inicio">
         <!-- ----------------- PHP Extraer colores de la db ----------------- -->
-        <?php echo "PENELOCO"; ?>
         <?php include "/home/akbal/sites/old-akbal-dev/current/php/importar_colores.php";?>
         
       </div>
