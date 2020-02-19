@@ -48,7 +48,7 @@
     <div id="Database" class="nada">
       <!-- ----------- INICIO EXTRACCION PHP ----------- -->
 
-      <?php include "/home/akbal/sites/old-akbal-dev/current/php/importar_puntuacion.php";?>
+      <?php include "/home/akbal/sites/old.akbal.dev/current/php/importar_puntuacion.php";?>
 
       <!-- ----------- FIN EXTRACCION PHP ----------- -->
     </div>

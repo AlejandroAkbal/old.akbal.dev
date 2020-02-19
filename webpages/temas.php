@@ -83,7 +83,7 @@
 
       <div class="contenido2" id="inicio">
         <!-- ----------------- PHP Extraer colores de la db ----------------- -->
-        <?php include "/home/akbal/sites/old-akbal-dev/current/php/importar_colores.php";?>
+        <?php include "/home/akbal/sites/old.akbal.dev/current/php/importar_colores.php";?>
         
       </div>
     </div>
