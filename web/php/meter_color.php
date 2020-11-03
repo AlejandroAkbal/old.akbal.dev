@@ -1,113 +1,50 @@
 <?php
 
-$servername = "10.135.191.214";
-$username = "old_akbal_user";
-$password = "VEAIEMFSh5sJRjskgCyI8M01fgDy2WWZ";
-$database = "old_akbal_db";
+// --- Helpers
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
 
-
-
-// Create connection
-$link = mysqli_connect($servername, $username, $password, $database);
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+    return $data;
 }
 
 
-// ---------- Coger los valores pasados ---------- 
+// --- Verification
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    die("Solo peticiones POST");
+}
 
-$colorErr = $numberErr = "";
+if (empty($_POST["colorActual"])) {
+    die("Es necesario que envies algun tema");
+}
 
-// ---------- Sanizar el input ---------- 
+$colorActual = test_input($_POST["colorActual"]);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    //  ---------- Puntuacion 
-    
-    if (empty($_POST["colorActual"])) {
-    $colorErr = "Es necesario que envies algun tema";
-    goto end;
-      
-    } else {
-      
-    $colorActual = test_input($_POST["colorActual"]);
-        
-    if(!preg_match('/#([a-f]|[A-F]|[0-9]){3}(([a-f]|[A-F]|[0-9]){3})?\b/',$colorActual)){
-        $numberErr = "Es necesario que envies un tema valido!";
-        goto end;
-    }
-    }
-        
+if (!preg_match('/#([a-f]|[A-F]|[0-9]){3}(([a-f]|[A-F]|[0-9]){3})?\b/', $colorActual)) {
+    die("Es necesario que envies un tema valido!");
 }
 
 
-// ---------- Funcion que saniza ----------
+// --- Database connection
+$dbconnect = require('connect_database.php');
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
- // ---------- Attempt select query execution ---------- 
 $sql = "INSERT INTO temas(color) VALUES('$colorActual')";
-if($result = mysqli_query($link, $sql)){
-    
-   echo "Los datos han sido enviados; $result";
-        
-    } else {
-        echo "ERROR: " . mysqli_error($link);
-        
-    }
- 
-// ---------- Close connection ---------- 
-mysqli_close($link);
+
+$query = mysqli_query($dbconnect, $sql);
+
+if (!$query) {
+    die(mysqli_error($dbconnect));
+}
 
 
-// ---------- Resultado ---------- 
-
-end:
-echo $colorErr;
-echo "<br> <br>";
-echo $numberErr;
-echo "<br> <br>";
-echo "Color actual: " . $colorActual;
-echo "<br> <br>";
-
-?>
-
-<html>
-
-<head>
-
-    <style>
-        
-        html {
-            background-color: #211b29;
-            color: wheat;
-        }
-        
-    </style>
-
-    <script type="text/javascript">
-        /*      Devolver a la pagina          */
-
-        function wait() {
-            setTimeout(function() {
-                window.location.href = "/temas"
-            }, 5000);
-        }
-        wait();
-    </script>
-    
-</head>
-
-<body>
-
-    <h1>En 5 segundos seras redirigido a temas</h1>
-
-</body>
-
-</html>
+// --- Results
+echo
+    "
+    <h1> Datos enviados </h1>
+    <h2> Color enviado: " . $colorActual . " </h2>
+    <h3> 
+        <a href='/temas.php'/> Volver </a>
+    </h3>
+    ";
