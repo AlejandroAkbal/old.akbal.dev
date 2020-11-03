@@ -48,7 +48,7 @@
     <div id="Database" class="nada">
       <!-- ----------- INICIO EXTRACCION PHP ----------- -->
 
-      <?php include(dirname(__DIR__)."/php/importar_puntuacion.php") ?>
+      <?php include(dirname(__DIR__)."/php/importar_puntuaciones.php") ?>
 
       <!-- ----------- FIN EXTRACCION PHP ----------- -->
     </div>
