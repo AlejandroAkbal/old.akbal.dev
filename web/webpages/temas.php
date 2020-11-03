@@ -2,100 +2,77 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <!-- ----------------- Defaults ----------------- -->
 
-    <title>Akbal's Themes</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <!-- ----------------- Defaults ----------------- -->
 
-    <!-- ----------------- Google's ----------------- -->
+  <title>Akbal's Themes</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
+  <!-- ----------------- Google's ----------------- -->
 
-    <meta name="author" content="Alejandro Akbal" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 
-    <meta
-      name="description"
-      content="Temas para la pagina web de Alejandro Akbal"
-    />
+  <meta name="author" content="Alejandro Akbal" />
 
-    <meta name="keywords" content="alejandro,akbal,webpage" />
+  <meta name="description" content="Temas para la pagina web de Alejandro Akbal" />
 
-    <!-- ----------------- CSS y JS ----------------- -->
+  <meta name="keywords" content="alejandro,akbal,webpage" />
 
-    <link href="/css/temas.css" type="text/css" rel="stylesheet" />
+  <!-- ----------------- CSS y JS ----------------- -->
 
-    <!-- --- Color JS --- -->
+  <link href="/css/temas.css" type="text/css" rel="stylesheet" />
 
-    <style id="elementoColorear"></style>
-  </head>
+  <!-- --- Color JS --- -->
 
-  <!-- ----------------- Cuerpo ----------------- -->
+  <style id="elementoColorear"></style>
+</head>
 
-  <body>
-    <div class="cuerpo">
-      <div class="contenido1">
-        <!-- ----------------- Guardar el color actual ----------------- -->
+<!-- ----------------- Cuerpo ----------------- -->
 
-        <button
-          onclick="GuardarDB()"
-          title="Subir tema a la nube"
-          class="AgregarColor"
-        >
-          +
-        </button>
+<body>
+  <div class="cuerpo">
+    <div class="contenido1">
+      <!-- ----------------- Guardar el color actual ----------------- -->
 
-        <form id="GuardarDB" method="post" action="../php/meter_color.php">
-          <input id="colorGenerado" name="colorActual" type="hidden" value="" />
-        </form>
+      <button onclick="GuardarDB()" title="Subir tema a la nube" class="AgregarColor">
+        +
+      </button>
 
-        <!-- ----------------- Formulario RGB --------- ELIMINAR -------- -->
+      <form id="GuardarDB" method="post" action="../php/meter_color.php">
+        <input id="colorGenerado" name="colorActual" type="hidden" value="" />
+      </form>
 
-        <input
-          title="RGB"
-          type="radio"
-          name="opcionesRGB"
-          onclick="cambiarStyle()"
-        />
-        <br />
-        <input
-          title="Guardar tema"
-          type="radio"
-          name="opcionesRGB"
-          onclick="guardarStyle()"
-        />
-        <br />
-        <input
-          title="Desactivar RGB"
-          type="radio"
-          name="opcionesRGB"
-          onclick="quitarStyle()"
-        />
-        <br />
+      <!-- ----------------- Formulario RGB --------- ELIMINAR -------- -->
 
-        <a href="/">Akbal's Themes</a>
-      </div>
+      <input title="RGB" type="radio" name="opcionesRGB" onclick="cambiarStyle()" />
+      <br />
+      <input title="Guardar tema" type="radio" name="opcionesRGB" onclick="guardarStyle()" />
+      <br />
+      <input title="Desactivar RGB" type="radio" name="opcionesRGB" onclick="quitarStyle()" />
+      <br />
 
-      <div class="contenido2" id="inicio">
-        <!-- ----------------- PHP Extraer colores de la db ----------------- -->
-        <?php include(dirname(__DIR__)."/php/importar_colores.php") ?>
-        
-      </div>
+      <a href="/">Akbal's Themes</a>
     </div>
 
-    <div class="footer">
-      <a href="#inicio">Subir</a>
+    <div class="contenido2" id="inicio">
+      <!-- ----------------- PHP Extraer colores de la db ----------------- -->
+      <?php include(dirname(__DIR__) . "/php/importar_colores.php") ?>
+
     </div>
-  </body>
+  </div>
 
-  <!-- --- JS aqui porque no le da la gana funcionar antes --- -->
+  <div class="footer">
+    <a href="#inicio">Subir</a>
+  </div>
+</body>
 
-  <script src="/js/aplicarColores.js"></script>
+<!-- --- JS aqui porque no le da la gana funcionar antes --- -->
 
-  <script src="/js/temas.js"></script>
+<script src="/js/aplicarColores.js"></script>
+
+<script src="/js/temas.js"></script>
+
 </html>
