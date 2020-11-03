@@ -1,6 +1,11 @@
 <?php
 
 $url = getenv('DATABASE_URL');
+
+if (!$url) {
+    die("No database assigned!");
+}
+
 $components = parse_url($url);
 
 if ($components) {
