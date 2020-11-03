@@ -48,7 +48,7 @@
     <div id="Database" class="nada">
       <!-- ----------- INICIO EXTRACCION PHP ----------- -->
 
-      <?php include "/home/akbal/sites/old.akbal.dev/current/php/importar_puntuacion.php";?>
+      <?php include(dirname(__DIR__)."/../php/importar_puntuacion.php") ?>
 
       <!-- ----------- FIN EXTRACCION PHP ----------- -->
     </div>
@@ -56,7 +56,7 @@
     <span class="opciones">
       <button onclick="cambiar_forma()">Cambiar Forma</button>
 
-      <form action="/php/meter_puntuacion.php" method="POST">
+      <form action="/php/meter_puntuaciones.php" method="POST">
         <input
           type="text"
           name="meterusuario"
