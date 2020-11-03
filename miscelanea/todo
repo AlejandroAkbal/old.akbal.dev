@@ -1,5 +1,0 @@
-Things to keep in mind:
-PHP 7.3 fpm needs to be changed to allow .php and .html files
-https://stackoverflow.com/posts/53886160/revisions
-
-Nginx needs that too
