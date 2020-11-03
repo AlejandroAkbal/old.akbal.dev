@@ -83,7 +83,7 @@
 
       <div class="contenido2" id="inicio">
         <!-- ----------------- PHP Extraer colores de la db ----------------- -->
-        <?php include(dirname(__DIR__)."/../php/importar_colores.php") ?>
+        <?php include(dirname(__DIR__)."/php/importar_colores.php") ?>
         
       </div>
     </div>
