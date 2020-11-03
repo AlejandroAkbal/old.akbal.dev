@@ -1,7 +1,0 @@
-<?php
-
-    echo '<input id="colorActual" type="hidden" name="colorActual" value="';
-    echo $_SESSION["color"];
-    echo '">';
-
-?>
