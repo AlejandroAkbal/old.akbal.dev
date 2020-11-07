@@ -23,7 +23,7 @@ echo
             <th>Puntuacion</th>
         </tr>";
 
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysqli_fetch_array($query)) {
     echo
         "<tr>
             <td>" . $row['id'] . "</td>
