@@ -48,6 +48,7 @@ div > a > img {
 
 .tercera:hover {
     background-image: url(../images/gousto4.jpg);
+    background-size: cover;
     display: inline-flex;
 }
 
