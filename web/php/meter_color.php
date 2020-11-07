@@ -45,6 +45,6 @@ echo
     <h1> Datos enviados </h1>
     <h2> Color enviado: " . $colorActual . " </h2>
     <h3> 
-        <a href='/temas.php'/> Volver </a>
+        <a href='/webpages/temas.php'/> Volver </a>
     </h3>
     ";

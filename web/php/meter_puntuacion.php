@@ -55,6 +55,6 @@ echo
     <h2> Usuario enviado: " . $meterusuario . " </h2>
     <h2> Puntuacion enviada: " . $meterpuntuacion . " </h2>
     <h3> 
-        <a href='/clicker.php'/> Volver </a>
+        <a href='/webpages/clicker.php'/> Volver </a>
     </h3>
     ";
