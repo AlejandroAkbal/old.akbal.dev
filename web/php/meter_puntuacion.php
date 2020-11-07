@@ -39,7 +39,7 @@ if (!is_numeric($meterpuntuacion)) {
 // --- Database connection
 $dbconnect = require('connect_database.php');
 
-$sql = "INSERT INTO puntuacion(usuario, puntuacion) VALUES ('$meterusuario', '$meterpuntuacion')";
+$sql = "INSERT INTO puntuacion(usuario, puntuacion) VALUES ('{$meterusuario}', '{$meterpuntuacion}')";
 
 $query = mysqli_query($dbconnect, $sql);
 
@@ -52,8 +52,8 @@ if (!$query) {
 echo
   "
     <h1> Datos enviados </h1>
-    <h2> Usuario enviado: " . $meterusuario . " </h2>
-    <h2> Puntuacion enviada: " . $meterpuntuacion . " </h2>
+    <h2> Usuario enviado: {$meterusuario}</h2>
+    <h2> Puntuacion enviada: {$meterpuntuacion}</h2>
     <h3> 
         <a href='/webpages/clicker.php'/> Volver </a>
     </h3>

@@ -26,9 +26,9 @@ echo
 while ($row = mysqli_fetch_array($query)) {
     echo
         "<tr>
-            <td>" . $row['id'] . "</td>
-            <td>" . $row['usuario'] . "</td>
-            <td>" . $row['puntuacion'] . "</td>
+            <td>{$row['id']}</td>
+            <td>{$row['usuario']}</td>
+            <td>{$row['puntuacion']}</td>
         </tr>";
 }
 

@@ -2,7 +2,7 @@
 
 $dbconnect = require('connect_database.php');
 
-$sql = "SELECT color FROM temas ORDER BY date DESC LIMIT 100";
+$sql = "SELECT color FROM temas ORDER BY date DESC LIMIT 100;";
 
 $query = mysqli_query($dbconnect, $sql);
 
@@ -16,11 +16,11 @@ if (!(mysqli_num_rows($query) > 0)) {
 
 while ($row = mysqli_fetch_array($query)) {
     echo
-        "<div class='colores' style='background-color:" . $row['color'] . ";'>
+        "<div class='colores' style='background-color: {$row['color']};'>
             <div class='overlay'>
                 <div class='texto'>
-                    <h2>" . $row['color'] .  "</h2>
-                    <button onclick=\"aplicarUnColor(" . $row['color'] . ")\"'>Aplicar este color</button>
+                    <h2>{$row['color']} </h2>
+                    <button onclick=\"aplicarUnColor('{$row['color']}')\">Aplicar este color</button>
                 </div>
             </div>
         </div>";
