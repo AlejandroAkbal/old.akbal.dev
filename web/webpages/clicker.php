@@ -51,7 +51,7 @@
   <span class="opciones">
     <button onclick="cambiar_forma()">Cambiar Forma</button>
 
-    <form action="/php/meter_puntuaciones.php" method="POST">
+    <form action="/php/meter_puntuacion.php" method="POST">
       <input type="text" name="meterusuario" placeholder="Tu nombre" value="" />
 
       <input id="meterlapuntuacion" type="hidden" name="meterpuntuacion" value="0" />
