@@ -39,7 +39,7 @@ if (!is_numeric($meterpuntuacion)) {
 // --- Database connection
 $dbconnect = require('connect_database.php');
 
-$sql = "INSERT INTO puntuacion(id, usuario, puntuacion) VALUES('$meterusuario', '$meterpuntuacion')";
+$sql = "INSERT INTO puntuacion(usuario, puntuacion) VALUES ('$meterusuario', '$meterpuntuacion')";
 
 $query = mysqli_query($dbconnect, $sql);
 
