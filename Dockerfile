@@ -1,4 +1,4 @@
-ARG PHP_VERSION=8.2
+ARG PHP_VERSION=7.4
 
 FROM serversideup/php:beta-${PHP_VERSION}-fpm-nginx AS base
 
