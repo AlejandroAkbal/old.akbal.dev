@@ -1,0 +1,37 @@
+version: '3.8'
+services:
+
+
+    app:
+        build:
+          dockerfile: Dockerfile
+          context: .
+        environment:
+          PHP_FPM_POOL_NAME: "my-app_php"
+
+          DB_HOST: 'mariadb'
+          DB_DATABASE: '${DB_DATABASE}'
+          DB_USERNAME: '${DB_USERNAME}'
+          DB_PASSWORD: '${DB_PASSWORD}'
+
+
+        depends_on:
+            mariadb:
+                condition: service_healthy
+
+
+    mariadb:
+        image: 'mariadb:10'
+        environment:
+            MARIADB_DATABASE: '${DB_DATABASE}'
+            MARIADB_USER: '${DB_USERNAME}'
+            MARIADB_PASSWORD: '${DB_PASSWORD}'
+            MARIADB_ROOT_PASSWORD: '${DB_PASSWORD}'
+        volumes:
+            - 'akbal-db:/var/lib/mysql'
+        healthcheck:
+          test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+
+
+volumes:
+    akbal-db:
