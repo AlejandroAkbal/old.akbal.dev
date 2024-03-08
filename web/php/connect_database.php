@@ -1,19 +1,12 @@
 <?php
 
-$url = getenv('DATABASE_URL');
+$hostname = getenv('DB_HOST');
+$database = getenv('DB_DATABASE');
+$username = getenv('DB_USERNAME');
+$password = getenv('DB_PASSWORD');
 
-if (!$url) {
+if (!$hostname || !$database || !$username || !$password) {
     die("No database assigned!");
-}
-
-$components = parse_url($url);
-
-if ($components) {
-    $hostname = $components['host'];
-    $username = $components['user'];
-    $password = $components['pass'];
-    $database = substr($components['path'], 1);
-    $port = $components['port'];
 }
 
 $dbconnect = mysqli_connect($hostname, $username, $password, $database);
