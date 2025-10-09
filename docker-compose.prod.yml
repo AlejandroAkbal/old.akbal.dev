@@ -1,7 +1,5 @@
 version: '3.8'
 services:
-
-
     app:
         build:
           dockerfile: Dockerfile
@@ -19,7 +17,6 @@ services:
             mariadb:
                 condition: service_healthy
 
-
     mariadb:
         image: 'mariadb:10'
         environment:
@@ -31,7 +28,6 @@ services:
             - 'akbal-db:/var/lib/mysql'
         healthcheck:
           test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
-
 
 volumes:
     akbal-db:
